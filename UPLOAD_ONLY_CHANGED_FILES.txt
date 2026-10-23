@@ -1,4 +1,4 @@
-Jurnale v2.1.1 — File yang diperbarui
+Jurnale v2.1.0 — File yang diperbarui
 
 Commit file berikut ke repository GitHub Jurnale:
 
@@ -8,7 +8,7 @@ Commit file berikut ke repository GitHub Jurnale:
 Perintah:
 
   git add index.html TODO.md
-  git commit -m "Center Performance card and lock overview scroll"
+  git commit -m "Add dynamic staggered UI animations"
   git push
 
 Untuk memperbarui aplikasi saja, cukup commit index.html.
