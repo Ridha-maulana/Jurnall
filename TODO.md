@@ -21,3 +21,16 @@
 - [x] Advanced Statistics dimulai dari pengaturan Periode dan berlanjut hingga Pair terpopuler.
 - [x] Layout Performance menyesuaikan HP, tablet, dan laptop.
 - [x] Versi aplikasi dinaikkan menjadi 2.0.0.
+
+## Performance v2.0.1
+- [x] Panel `Profitability · ...% menang` dipindahkan ke bawah bagian `Distribusi win / loss`.
+- [x] Jarak judul, panel, dan baris tabel Advanced Statistics dirapikan agar teks dan nilai tidak terpotong pada layar kecil.
+- [x] Navigasi bawah Performance, My Journal, dan Tools diberi transisi, highlight, glow, dan animasi ikon saat berpindah tab.
+- [x] Versi aplikasi dinaikkan menjadi 2.0.1.
+
+## Performance v2.0.2
+- [x] Seluruh blok Advanced Statistics dipindahkan setelah Distribusi win / loss, termasuk Profitability, baris Total Trades sampai Withdrawals, dan catatan perhitungan Pips.
+- [x] Jarak vertikal antara metrik Performance, Bagikan ke story, dan tombol detail disamakan tanpa ruang flex kosong.
+- [x] Animasi navigasi bawah disederhanakan menjadi transisi standar yang halus.
+- [x] Halaman Performance memiliki animasi masuk ringan saat pertama dibuka atau saat tab Performance dipilih.
+- [x] Versi aplikasi dinaikkan menjadi 2.0.2.

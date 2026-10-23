@@ -1,0 +1,14 @@
+Jurnale v2.0.2 — File yang diperbarui
+
+Commit file berikut ke repository GitHub Jurnale:
+
+  index.html
+  TODO.md
+
+Perintah:
+
+  git add index.html TODO.md
+  git commit -m "Refine Advanced Statistics order and Performance animations"
+  git push
+
+Untuk memperbarui aplikasi saja, cukup commit index.html.
