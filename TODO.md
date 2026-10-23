@@ -40,3 +40,10 @@
 - [x] Hanya kartu tabel Advanced Statistics beserta isinya yang dipindahkan ke bawah Distribusi win / loss.
 - [x] Margin tambahan antara metrik Perolehan Pips dan tombol Bagikan ke story dihapus agar jarak antar bagian konsisten.
 - [x] Versi aplikasi dinaikkan menjadi 2.0.3.
+
+## Performance v2.0.4
+- [x] Heading `OVERVIEW / ACCOUNT`, `Performance`, dan deskripsi analisis di halaman utama dihapus.
+- [x] Ikon dompet dipindahkan ke bawah nama Active Account.
+- [x] Judul dan subjudul Advanced Statistics ditempatkan setelah bagian Periode.
+- [x] Animasi muncul ringan ditambahkan untuk tabel/matriks Performance dan judul Advanced Statistics.
+- [x] Versi aplikasi dinaikkan menjadi 2.0.4.
