@@ -62,3 +62,12 @@
 - [x] Grafik menggambar garis lebih lama, area grafik fade-in, dan titik akhir grafik membesar singkat.
 - [x] Data, legenda, dan tombol aksi muncul bertahap dengan timing yang lebih terasa.
 - [x] Versi aplikasi dinaikkan menjadi 2.0.6.
+
+## UI Animation v2.1.0
+- [x] Staggered entrance diterapkan pada kartu, statistik, teks, legenda, dan tombol dengan jeda bertahap 50–100 ms.
+- [x] Easing modern `cubic-bezier(0.16, 1, 0.3, 1)` digunakan pada entrance dan transisi utama dengan durasi 400–600 ms.
+- [x] Hover dan tap micro-interaction ditambahkan pada tombol, kartu statistik, selector, dan tab.
+- [x] Grafik Performance tumbuh dari kiri ke kanan melalui path drawing dan area fade-in.
+- [x] Angka utama Performance kembali menggunakan counting-up dari 0 saat pertama kali dimuat.
+- [x] Reduced-motion fallback tetap tersedia untuk pengguna yang menonaktifkan animasi.
+- [x] Versi aplikasi dinaikkan menjadi 2.1.0.
