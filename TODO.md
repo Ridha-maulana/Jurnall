@@ -34,3 +34,9 @@
 - [x] Animasi navigasi bawah disederhanakan menjadi transisi standar yang halus.
 - [x] Halaman Performance memiliki animasi masuk ringan saat pertama dibuka atau saat tab Performance dipilih.
 - [x] Versi aplikasi dinaikkan menjadi 2.0.2.
+
+## Performance v2.0.3
+- [x] Judul `Advanced Statistics` dan subjudul `Statistik lengkap akun · ... trade` tetap berada di posisi atas.
+- [x] Hanya kartu tabel Advanced Statistics beserta isinya yang dipindahkan ke bawah Distribusi win / loss.
+- [x] Margin tambahan antara metrik Perolehan Pips dan tombol Bagikan ke story dihapus agar jarak antar bagian konsisten.
+- [x] Versi aplikasi dinaikkan menjadi 2.0.3.
