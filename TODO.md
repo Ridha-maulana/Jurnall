@@ -47,3 +47,18 @@
 - [x] Judul dan subjudul Advanced Statistics ditempatkan setelah bagian Periode.
 - [x] Animasi muncul ringan ditambahkan untuk tabel/matriks Performance dan judul Advanced Statistics.
 - [x] Versi aplikasi dinaikkan menjadi 2.0.4.
+
+## Performance v2.0.5
+- [x] Animasi khusus kartu Performance dibuat lebih hidup namun tetap halus.
+- [x] Saldo utama mendapat efek muncul ringan.
+- [x] Garis grafik digambar bertahap dan area grafik muncul dengan fade-in.
+- [x] Kartu data, legenda, dan tombol aksi muncul berurutan dengan jeda singkat.
+- [x] Animasi tidak diterapkan ke halaman lain.
+- [x] Versi aplikasi dinaikkan menjadi 2.0.5.
+
+## Performance v2.0.6
+- [x] Sweep cahaya halus ditambahkan pada permukaan kartu Performance.
+- [x] Animasi saldo dibuat lebih terlihat dengan bounce ringan.
+- [x] Grafik menggambar garis lebih lama, area grafik fade-in, dan titik akhir grafik membesar singkat.
+- [x] Data, legenda, dan tombol aksi muncul bertahap dengan timing yang lebih terasa.
+- [x] Versi aplikasi dinaikkan menjadi 2.0.6.
