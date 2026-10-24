@@ -91,3 +91,8 @@
 - [x] Ikon dompet disamakan dengan bentuk tombol ikon kalender di header.
 - [x] Indikator titik merah pada detail Advanced Statistics disembunyikan.
 - [x] Versi aplikasi dinaikkan menjadi 2.1.3.
+
+## Advanced Statistics v2.1.4
+- [x] Titik hijau/merah yang melayang di pojok halaman dihapus dari DOM tampilan Advanced Statistics.
+- [x] Penyebabnya diperbaiki pada selector `.performance-detail-page .dot`, bukan pada overlay Chrome.
+- [x] Versi aplikasi dinaikkan menjadi 2.1.4.
