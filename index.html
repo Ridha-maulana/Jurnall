@@ -168,7 +168,7 @@
 .adv-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:15px 18px;border-bottom:1px solid #1c2a47;font-size:14px}.adv-row span{color:#8a94ab;min-width:0}.adv-row b{font-weight:800;color:#eef2ff;text-align:right;min-width:0;overflow-wrap:anywhere}.adv-row b.pos{color:#34d399}.adv-row b.neg{color:#ff6b81}
 .adv-note{padding:12px 18px 16px;margin:0}
 
-.perf-screen{display:flex;flex-direction:column;min-height:0;margin-bottom:18px}
+.perf-screen{display:flex;flex-direction:column;justify-content:flex-start;min-height:0;margin-bottom:18px;overflow:visible}
 .perf-screen>.hero-card.combo{display:flex;flex-direction:column;justify-content:flex-start;gap:10px;margin-bottom:0}
 .combo-mini{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.combo-mini>div{background:#0e1730;border:1px solid #223357;border-radius:12px;padding:10px 10px}.combo-mini span{display:block;font-size:10px;color:#8a97b8;margin-bottom:5px}.combo-mini b{display:block;font-size:14px;font-weight:800;color:#eef2ff}.combo-mini b.positive{color:#34d399}.combo-mini b.negative{color:#ff6b81}
 .dist-donut{display:flex;justify-content:center;margin:8px 0 16px}.dist-donut .pe-donut{width:200px;height:200px}
@@ -183,10 +183,11 @@
 @keyframes tableReveal{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes titleReveal{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 .performance-page{animation:performanceEnter .5s cubic-bezier(.16,1,.3,1) both!important}
+.performance-overview-page{height:auto;min-height:0;overflow:visible;overscroll-behavior:auto}
 .perf-screen>.hero-card.combo{animation:tableReveal .55s cubic-bezier(.16,1,.3,1) both!important}
 .perf-screen .combo-top{animation:tableReveal .48s cubic-bezier(.16,1,.3,1) .06s both!important}
 .perf-screen .combo-stats>div,.perf-screen .combo-mini>div,.perf-screen .performance-actions{animation:tableReveal .48s cubic-bezier(.16,1,.3,1) both!important}
-.perf-screen .combo-stats>div:nth-child(1),.perf-screen .combo-mini>div:nth-child(1){animation-delay:.12s!important}.perf-screen .combo-stats>div:nth-child(2),.perf-screen .combo-mini>div:nth-child(2){animation-delay:.18s!important}.perf-screen .combo-stats>div:nth-child(3),.perf-screen .combo-mini>div:nth-child(3){animation-delay:.24s!important}.perf-screen .combo-stats>div:nth-child(4),.perf-screen .combo-mini>div:nth-child(4){animation-delay:.30s!important}.adv-title{animation:titleReveal .45s cubic-bezier(.16,1,.3,1) both!important}.hero-account .wallet-inline{display:grid;place-items:center;width:32px;height:32px;margin:9px 0 0 auto;padding:0}
+.perf-screen .combo-stats>div:nth-child(1),.perf-screen .combo-mini>div:nth-child(1){animation-delay:.12s!important}.perf-screen .combo-stats>div:nth-child(2),.perf-screen .combo-mini>div:nth-child(2){animation-delay:.18s!important}.perf-screen .combo-stats>div:nth-child(3),.perf-screen .combo-mini>div:nth-child(3){animation-delay:.24s!important}.perf-screen .combo-stats>div:nth-child(4),.perf-screen .combo-mini>div:nth-child(4){animation-delay:.30s!important}.adv-title{animation:titleReveal .45s cubic-bezier(.16,1,.3,1) both!important}.hero-account .wallet-inline{display:grid;place-items:center;width:38px;height:38px;margin:9px 0 0 auto;padding:0;border-radius:10px}
 @keyframes performanceCardBloom{from{opacity:0;transform:translateY(10px) scale(.985);box-shadow:0 0 0 transparent}to{opacity:1;transform:translateY(0) scale(1);box-shadow:0 14px 42px #0b173d55}}
 @keyframes balancePulse{0%{opacity:0;transform:translateY(6px) scale(.96)}65%{opacity:1;transform:translateY(0) scale(1.035)}100%{opacity:1;transform:scale(1)}}
 @keyframes cardSweep{0%{transform:translateX(-135%) skewX(-16deg);opacity:0}18%{opacity:.22}72%{opacity:.1}100%{transform:translateX(135%) skewX(-16deg);opacity:0}}
@@ -208,6 +209,10 @@
 @media(prefers-reduced-motion:reduce){.bottom-nav .nav-item,.bottom-nav .nav-item:before,.bottom-nav .nav-item svg,.bottom-nav .nav-item span{animation:none!important;transition:none!important}}
 @media(min-width:761px){.performance-detail-page{padding-left:max(28px,calc((100vw - 940px)/2));padding-right:max(28px,calc((100vw - 940px)/2))}.performance-detail-top{padding-top:8px}.performance-detail-heading strong{font-size:18px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.cc-line{stroke-dasharray:none!important;stroke-dashoffset:0!important}}
+/* Posisi awal konten lebih dekat ke header, dengan scroll normal di semua tab */
+.main-content{padding-top:16px}
+@media(max-width:760px){.main-content{padding-top:14px}}
+.performance-detail-page .dot.r,.performance-detail-page .cc-pulse{display:none!important}
 </style>
 </head>
 <body>
@@ -218,7 +223,7 @@
 window.addEventListener("error",function(e){var b=document.getElementById("boot");if(b)b.textContent="Error: "+e.message;});
 "use strict";
 const { useEffect, useMemo, useRef, useState } = React;
-const APP_VERSION = '2.1.0';
+const APP_VERSION = '2.1.3';
 const ICONS = { "Activity": [["polyline", { "points": "22 12 18 12 15 21 9 3 6 12 2 12" }]], "ArrowDownRight": [["path", { "d": "M7 7l10 10" }], ["path", { "d": "M17 7v10H7" }]], "ArrowUpRight": [["path", { "d": "M7 17L17 7" }], ["path", { "d": "M7 7h10v10" }]], "BarChart3": [["path", { "d": "M3 3v18h18" }], ["path", { "d": "M18 17V9" }], ["path", { "d": "M13 17V5" }], ["path", { "d": "M8 17v-3" }]], "BookOpen": [["path", { "d": "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" }], ["path", { "d": "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" }]], "CalendarDays": [["rect", { "x": 3, "y": 4, "width": 18, "height": 18, "rx": 2 }], ["path", { "d": "M16 2v4" }], ["path", { "d": "M8 2v4" }], ["path", { "d": "M3 10h18" }], ["path", { "d": "M8 14h.01" }], ["path", { "d": "M12 14h.01" }], ["path", { "d": "M16 14h.01" }], ["path", { "d": "M8 18h.01" }], ["path", { "d": "M12 18h.01" }], ["path", { "d": "M16 18h.01" }]], "Camera": [["path", { "d": "M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z" }], ["circle", { "cx": 12, "cy": 13, "r": 3 }]], "ChevronDown": [["path", { "d": "M6 9l6 6 6-6" }]], "ChevronLeft": [["path", { "d": "M15 18l-6-6 6-6" }]], "ChevronRight": [["path", { "d": "M9 18l6-6-6-6" }]], "CircleHelp": [["circle", { "cx": 12, "cy": 12, "r": 10 }], ["path", { "d": "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }], ["path", { "d": "M12 17h.01" }]], "ClipboardPaste": [["path", { "d": "M15 2H9a1 1 0 0 0-1 1v2c0 .6.4 1 1 1h6c.6 0 1-.4 1-1V3c0-.6-.4-1-1-1z" }], ["path", { "d": "M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2" }]], "Cloud": [["path", { "d": "M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" }]], "Download": [["path", { "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }], ["path", { "d": "M7 10l5 5 5-5" }], ["path", { "d": "M12 15V3" }]], "FileJson": [["path", { "d": "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" }], ["path", { "d": "M14 2v6h6" }], ["path", { "d": "M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1" }], ["path", { "d": "M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1" }]], "Filter": [["path", { "d": "M22 3H2l8 9.46V19l4 2v-8.54z" }]], "LineChart": [["path", { "d": "M3 3v18h18" }], ["path", { "d": "M19 9l-5 5-4-4-3 3" }]], "Plus": [["path", { "d": "M5 12h14" }], ["path", { "d": "M12 5v14" }]], "Search": [["circle", { "cx": 11, "cy": 11, "r": 8 }], ["path", { "d": "M21 21l-4.3-4.3" }]], "Settings2": [["path", { "d": "M20 7h-9" }], ["path", { "d": "M14 17H5" }], ["circle", { "cx": 17, "cy": 17, "r": 3 }], ["circle", { "cx": 7, "cy": 7, "r": 3 }]], "Share2": [["circle", { "cx": 18, "cy": 5, "r": 3 }], ["circle", { "cx": 6, "cy": 12, "r": 3 }], ["circle", { "cx": 18, "cy": 19, "r": 3 }], ["path", { "d": "M8.59 13.51l6.83 3.98" }], ["path", { "d": "M15.41 6.51l-6.82 3.98" }]], "SlidersHorizontal": [["path", { "d": "M21 4h-7" }], ["path", { "d": "M10 4H3" }], ["path", { "d": "M21 12h-9" }], ["path", { "d": "M8 12H3" }], ["path", { "d": "M21 20h-5" }], ["path", { "d": "M12 20H3" }], ["path", { "d": "M14 2v4" }], ["path", { "d": "M8 10v4" }], ["path", { "d": "M16 18v4" }]], "Target": [["circle", { "cx": 12, "cy": 12, "r": 10 }], ["circle", { "cx": 12, "cy": 12, "r": 6 }], ["circle", { "cx": 12, "cy": 12, "r": 2 }]], "Trash2": [["path", { "d": "M3 6h18" }], ["path", { "d": "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" }], ["path", { "d": "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" }], ["path", { "d": "M10 11v6" }], ["path", { "d": "M14 11v6" }]], "TrendingDown": [["path", { "d": "M22 17l-8.5-8.5-5 5L2 7" }], ["path", { "d": "M16 17h6v-6" }]], "TrendingUp": [["path", { "d": "M22 7l-8.5 8.5-5-5L2 17" }], ["path", { "d": "M16 7h6v6" }]], "Upload": [["path", { "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }], ["path", { "d": "M17 8l-5-5-5 5" }], ["path", { "d": "M12 3v12" }]], "UserRound": [["circle", { "cx": 12, "cy": 8, "r": 5 }], ["path", { "d": "M20 21a8 8 0 0 0-16 0" }]], "Wallet": [["path", { "d": "M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" }], ["path", { "d": "M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" }]], "X": [["path", { "d": "M18 6L6 18" }], ["path", { "d": "M6 6l12 12" }]], "Zap": [["path", { "d": "M13 2L3 14h9l-1 8 10-12h-9l1-8z" }]] };
 function Icon({ name, size = 24, strokeWidth = 2, className, style }) {
     const node = ICONS[name] || [];
@@ -1412,7 +1417,7 @@ function Performance({ onSelectDate, onWallet, account, trades, period, setPerio
         if (e && e.name === 'AbortError')
             return;
     } saveShare(); };
-    return React.createElement("section", { className: "performance-page" },
+    return React.createElement("section", { className: `performance-page ${performanceView === 'overview' ? 'performance-overview-page' : 'performance-detail-wrap'}` },
         performanceView === 'overview' && React.createElement("div", { className: "perf-screen" },
             React.createElement("div", { className: "hero-card combo" },
                 React.createElement("div", { className: "combo-top" },
@@ -1429,7 +1434,7 @@ function Performance({ onSelectDate, onWallet, account, trades, period, setPerio
                     React.createElement("div", { className: "hero-account" },
                         React.createElement("span", null, "ACTIVE ACCOUNT"),
                         React.createElement("strong", null, account.name),
-                        React.createElement("button", { className: "icon-btn wallet-inline", onClick: onWallet, "aria-label": "Deposit dan Withdraw" },
+                        React.createElement("button", { className: "header-icon wallet-inline", onClick: onWallet, "aria-label": "Deposit dan Withdraw" },
                             React.createElement(Wallet, { size: 17 })))),
                 React.createElement("div", { className: "combo-stats" },
                     React.createElement("div", null,

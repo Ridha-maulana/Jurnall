@@ -71,3 +71,23 @@
 - [x] Angka utama Performance kembali menggunakan counting-up dari 0 saat pertama kali dimuat.
 - [x] Reduced-motion fallback tetap tersedia untuk pengguna yang menonaktifkan animasi.
 - [x] Versi aplikasi dinaikkan menjadi 2.1.0.
+
+## Performance v2.1.1
+- [x] Kartu utama Performance diposisikan di tengah area layar atas–bawah.
+- [x] Overview Performance tidak dapat ditarik atau discroll vertikal; gerakan yang tersisa hanya animasi internal kartu.
+- [x] Halaman detail Advanced Statistics dan Trader DNA tetap memiliki scroll untuk konten panjang.
+- [x] Versi aplikasi dinaikkan menjadi 2.1.1.
+
+## Layout v2.1.2
+- [x] Perilaku scroll overview Performance dikembalikan seperti sebelumnya.
+- [x] Kartu Performance tidak lagi terkunci di tengah atau mengunci overflow layar.
+- [x] Posisi awal konten dibuat lebih dekat ke header.
+- [x] Penyesuaian jarak atas berlaku konsisten pada Performance, My Journal, dan Tools.
+- [x] Versi aplikasi dinaikkan menjadi 2.1.2.
+
+## Layout v2.1.3
+- [x] Posisi awal konten dinaikkan lagi sekitar seperempat jarak agar lebih dekat ke bagian atas.
+- [x] Penyesuaian berlaku untuk Performance, My Journal, dan Tools.
+- [x] Ikon dompet disamakan dengan bentuk tombol ikon kalender di header.
+- [x] Indikator titik merah pada detail Advanced Statistics disembunyikan.
+- [x] Versi aplikasi dinaikkan menjadi 2.1.3.
