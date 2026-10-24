@@ -1,14 +1,15 @@
-Jurnale v2.1.4 — File yang diperbarui
+Jurnale v2.1.7 — File yang diperbarui
 
-Perbaikan titik hijau/merah di Advanced Statistics berasal dari elemen aplikasi `.dot`, bukan overlay Chrome.
+Perubahan haptic:
+- Getar diperhalus menjadi 8 ms.
+- Hanya tombol utama yang dapat memberi getar.
+- Ikon kalender header tetap bergetar.
+- Isi kalender/modal kalender tidak bergetar.
+- Semua tombol dan diagram di Advanced Statistics/Trader DNA tidak bergetar.
 
 Commit file:
-  index.html
-  TODO.md
-
-Perintah:
   git add index.html TODO.md
-  git commit -m "Remove floating Advanced Statistics dots"
+  git commit -m "Refine selective haptic feedback"
   git push
 
 Untuk memperbarui aplikasi saja, cukup commit index.html.

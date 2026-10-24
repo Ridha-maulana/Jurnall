@@ -96,3 +96,23 @@
 - [x] Titik hijau/merah yang melayang di pojok halaman dihapus dari DOM tampilan Advanced Statistics.
 - [x] Penyebabnya diperbaiki pada selector `.performance-detail-page .dot`, bukan pada overlay Chrome.
 - [x] Versi aplikasi dinaikkan menjadi 2.1.4.
+
+## Button interaction v2.1.5
+- [x] Menghapus kotak focus dan tap highlight sementara pada semua tombol.
+- [x] Menghapus animasi transisi kotak sementara pada Performance, My Journal, dan Tools.
+- [x] Tombol kalender, dompet, Advanced Statistics, Trader DNA, Bagikan ke story, backup, restore, CSV, akun, dan Add Trade langsung menampilkan bentuk finalnya.
+- [x] Animasi hover/active yang halus tetap dipertahankan tanpa outline kotak.
+- [x] Versi aplikasi dinaikkan menjadi 2.1.5.
+
+## Haptic feedback v2.1.6
+- [x] Menambahkan getar singkat sekitar 12 ms saat tombol disentuh pada HP/perangkat touch.
+- [x] Berlaku untuk tombol kalender, dompet, navigasi, Performance, My Journal, Tools, backup, restore, CSV, akun, Add Trade, dan tombol lainnya.
+- [x] Tidak berjalan pada desktop, browser/perangkat yang tidak mendukung `navigator.vibrate()`, atau mode reduced motion.
+- [x] Versi aplikasi dinaikkan menjadi 2.1.6.
+
+## Selective haptic v2.1.7
+- [x] Getar tombol diperlunak menjadi 8 ms agar lebih halus.
+- [x] Tombol kalender header tetap dapat memberi getar saat ikon kalender disentuh.
+- [x] Isi kalender/modal kalender tidak memberi getar.
+- [x] Semua tombol, diagram, tab, dan kontrol pada Advanced Statistics serta Trader DNA tidak memberi getar.
+- [x] Versi aplikasi dinaikkan menjadi 2.1.7.
