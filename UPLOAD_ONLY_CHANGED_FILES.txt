@@ -1,15 +1,15 @@
-Jurnale v2.1.7 — File yang diperbarui
+Jurnale v2.2.0 — File yang diperbarui
 
-Perubahan haptic:
-- Getar diperhalus menjadi 8 ms.
-- Hanya tombol utama yang dapat memberi getar.
-- Ikon kalender header tetap bergetar.
-- Isi kalender/modal kalender tidak bergetar.
-- Semua tombol dan diagram di Advanced Statistics/Trader DNA tidak bergetar.
+Pola haptic:
+- FAB/Add Trade: 18 ms.
+- Navigasi/filter/dropdown/kalender: 10 ms.
+- Simpan/deposit/tambah akun/backup: [15, 30, 20].
+- Hapus akun/log: [40, 40, 40].
+- Advanced Statistics dan Trader DNA: tanpa getar.
 
 Commit file:
   git add index.html TODO.md
-  git commit -m "Refine selective haptic feedback"
+  git commit -m "Add tiered haptic feedback patterns"
   git push
 
 Untuk memperbarui aplikasi saja, cukup commit index.html.

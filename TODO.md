@@ -116,3 +116,11 @@
 - [x] Isi kalender/modal kalender tidak memberi getar.
 - [x] Semua tombol, diagram, tab, dan kontrol pada Advanced Statistics serta Trader DNA tidak memberi getar.
 - [x] Versi aplikasi dinaikkan menjadi 2.1.7.
+
+## Haptic UX tiers v2.2.0
+- [x] Aksi utama seperti FAB/Add Trade menggunakan getar tegas 18 ms.
+- [x] Navigasi bawah dan filter/dropdown/kalender menggunakan tick ringan 10 ms.
+- [x] Tombol simpan, deposit, tambah akun, dan backup menggunakan pola sukses `[15, 30, 20]`.
+- [x] Tombol hapus akun/log menggunakan pola peringatan `[40, 40, 40]`.
+- [x] Advanced Statistics dan Trader DNA tetap tidak memberi getar pada tombol maupun diagram.
+- [x] Versi aplikasi dinaikkan menjadi 2.2.0.
